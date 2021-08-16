@@ -1,0 +1,26 @@
+name: Testing Docker Thing
+
+on:
+    push:
+        branches: [ main ]
+    pull_request:
+        branches: [ main ]
+
+jobs:
+    build:
+
+        container:
+            image: joezuntz/txpipe
+            volumes: []
+
+        # not sure if this applies
+        runs-on: ubuntu-latest
+
+        steps:
+        - name: Checkout repository
+          uses: actions/checkout@v2
+        - name: Test1
+          run: |
+              ls
+              which -a python
+              pip list
