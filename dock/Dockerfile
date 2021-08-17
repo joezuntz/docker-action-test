@@ -12,3 +12,4 @@ RUN apt-get update -y && DEBIAN_FRONTEND="noninteractive" apt-get install -y gcc
 
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 10
 RUN update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 10
+RUN pip install --no-cache-dir --upgrade pip
