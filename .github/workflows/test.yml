@@ -35,9 +35,9 @@ jobs:
           password: '${{ secrets.DOCKERHUB_TOKEN }}'
 
       - name: Echo test
-      run: |
-        echo One: ${{ env.GITHUB_SHA }}
-        echo One: ${GITHUB_SHA}
+        run: |
+          echo One: ${{ env.GITHUB_SHA }}
+          echo One: ${GITHUB_SHA}
 
       - name: Build and push
         id: docker_build
