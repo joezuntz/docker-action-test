@@ -46,7 +46,7 @@ jobs:
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
           build-args: |
-            GITHUB_SHA=magic_potato
+            "GITHUB_SHA=${{ env.GITHUB_SHA }}"
 
       - name: Move cache
         run: |
