@@ -38,7 +38,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         env:
-          COMMIT_SHA: ${GITHUB_SHA}x$GITHUB_SHA
+          COMMIT_SHA: ${{ env.GITHUB_SHA }}
         with:
           builder: '${{ steps.buildx.outputs.name }}'
           context: ./dock
